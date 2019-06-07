@@ -36,14 +36,16 @@ mfexistdihedral(S, p, maxcoefs=150) = {
 	return(0);
 };
 
-forprimestep(p = 3, 167, 4,{
-	k = (p+1)/2;
-	S = mfinit([1,k], 1);
-	if(mfexistdihedral(S, p),
-		printf("p = %s, k = %s\nCongruence dihedrale trouvee !\n\n", p, k);
-	,
-		printf("p = %s, k = %s\nAucune congruence dihedrale\n\n", p, k);
+test = 0;
+if(test,{
+	forprimestep(p = 3, 167, 4,
+		k = (p+1)/2;
+		S = mfinit([1,k], 1);
+		if(mfexistdihedral(S, p),
+			printf("p = %s, k = %s\nCongruence dihedrale trouvee !\n\n", p, k);
+		,
+			printf("p = %s, k = %s\nAucune congruence dihedrale\n\n", p, k);
+		);
 	);
 });
-
 
