@@ -7,6 +7,10 @@ mfispordinary(f, p) = {
 	if(Na == 0, return(0));
 	return(1);
 }
+addhelp(mfispordinary, {"mfispordinary(f, p) : vérifie si la norme du p-ième coefficient de f est divisible par p.\n\n
+Paramètres :\n
+- f : une forme modulaire;\n 
+- p : un premier rationnel."})
 
 mfisdihedral(f, nf, p, primeover, {D = 1}, {maxcoefs=150}) = {
 	if(D == 1, D = p; chiD(q) = kronecker(q, D), chiD(q) = kronecker(D, q));
@@ -18,9 +22,17 @@ mfisdihedral(f, nf, p, primeover, {D = 1}, {maxcoefs=150}) = {
 	);
 	return(1);
 };
-addhelp(mfisdihedral, "mfisdihedral(f, p, {D=1}, {maxcoefs=150}) : Verifie si les maxcoefs premier coefficients de la forme modulaire f satisfait la condition de congruence dihedrale pour un nombre premier p");
+addhelp(mfisdihedral, {"mfisdihedral(f, nf, p, primeover, {D = 1}, {maxcoefs=150}) : Vérifie si une forme modulaire satisfait une congruence diédrale en p.\n\n
+Paramètres :\n
+- f : une forme modulaire;\n
+- nf : un corps de nombre;\n
+- p : un premier rationnel;\n
+- primeover : un premier de nf au dessus de p;\n 
+- D : un entier congru à 0 ou 1 mod 4. Si D = 1, alors la fonction vérifie si la forme est diédrale au sens de Dummigan-Heim. Si D>1, alors la fonction vérifie si la forme est diédrale
+au sens de Brown-Ghate;\n 
+- maxcoefs : seuil maximal de coeffients à vérifier.\n"});
 
-mfexistdihedral(S, p, maxcoefs=150) = {
+mfexistdihedral(S, p, {maxcoefs=150}) = {
 	nfs = mffields(S);
 	B = mfeigenbasis(S);
 	if(#B == 0, return(0));
@@ -35,8 +47,18 @@ mfexistdihedral(S, p, maxcoefs=150) = {
 	);
 	return(0);
 };
+addhelp(mfexistdihedral, {"mfexistdihedral(S, p, {maxcoefs=150}) : Détermine s'il existe une forme cuspidale propre normalisée qui satisfait une congruence diédrale en p au sens de Dummigan-Heim.\n\n 
+Paramètres :\n
+- S : un espace de formes cuspidales;\n
+- p : un premier rationnel;\n 
+- maxcoefs : seuil maximal de coeffients à vérifier.\n"})
 
-test = 0;
+
+/*
+Vérification de la congruence diédrale au sens de Dummigan-Heim des espaces de formes cuspidales de poids k = (p+1)/2 pour p entre 3 et 167.
+Attention : ce test est très long à exécuter.
+*/
+test = 0; \\Pour exéctuer le test, changer ce paramètre à 1.
 if(test,{
 	forprimestep(p = 3, 167, 4,
 		k = (p+1)/2;
