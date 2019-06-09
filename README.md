@@ -10,6 +10,6 @@ List of files :
 
 References :
 
--Ayotte, D, Relations entre le nombre de classes et les formes modulaire, master thesis (2019)
--Dummigan, Neil; Heim, Bernhard, Symmetric square L-values and dihedral congruences for cusp forms. J. Number Theory 130 (2010)
--Brown, Alexander F.; Ghate, Eknath P. Dihedral congruence primes and class fields of real quadratic fields. J. Number Theory 95 (2002)
+* Ayotte, D, Relations entre le nombre de classes et les formes modulaire, master thesis (2019)
+* Dummigan, Neil; Heim, Bernhard, Symmetric square L-values and dihedral congruences for cusp forms. J. Number Theory 130 (2010)
+* Brown, Alexander F.; Ghate, Eknath P. Dihedral congruence primes and class fields of real quadratic fields. J. Number Theory 95 (2002)
