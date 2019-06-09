@@ -1,7 +1,5 @@
 # Sym2-Dihedral
 
-Dépôt git contenant quelques fonctions utilitaires pour les calculs avec les formes modulaires se trouvant dans mon mémoire. Plus précisément, sur la trace de la fonction L carrée symétrique et les congruences diédrales d'une forme modulaire.
-
 This repo contains multiple function written in PARI/GP about modulars forms, bernoulli numbers and L function. More precisely, on the trace of the symetric square L function and dihedral congruences of modular forms. This code was written as part of my master thesis.
 
 List of files :
