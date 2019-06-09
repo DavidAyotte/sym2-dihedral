@@ -1,15 +1,11 @@
 
 print("read : trace.gp");
 
+read("misc.gp");
+
 facteurck(k) = {
 	return(2^(2*k-3)*(k/2 - 1)!/(k-1)!);
 }
-
-berngen(k, D) = {
-	bernoullipol = bernpol(k-1);
-	return D^(k-2)*sum(i = 1, D, kronecker(-D, i)*subst(bernoullipol, x, i/D));
-}
-addhelp(berngen, "Calcul du nombre de bernoulli generalise B_(k-1, (-D/.))");
 
 traceniv1(k) = {
 	if (k%2 != 0, error("k doit etre pair !"));
@@ -22,7 +18,7 @@ traceniv1(k) = {
 	
 	return(uk*(bern4 + 2*bern3 + bernfrac(2*k-2)*(1+k/bernfrac(k))));
 }
-addhelp(traceniv1, "Calcul la trace de Dummigan-Heim");
+addhelp(traceniv1, "traceniv1(k) : compute the trace of the symetric square L function");
 
 ordpfactorial(n, p) = {
 	if(!isprime(p), error("p doit être un nombre premier"));
