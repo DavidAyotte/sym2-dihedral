@@ -4,9 +4,9 @@ This repo contains multiple function written in PARI/GP about modulars forms, be
 
 List of files :
 
-* trace.gp : contains function about the trace of the Symmetric square L function as define by Dummigan and Heim;
-* dihedral.gp : contient des fonctions utilitaires pour vérifier si une forme modulaire satisfait une congruence diédrale;
-* bernoulli.gp : Fonctions tests avec les nombres de Bernoulli.
+* trace.gp : contains functions about the trace of the Symmetric square L function as define by Dummigan and Heim;
+* dihedral.gp : contains functions about dihedrals congruences on modular forms;
+* misc.gp : miscealleneous functions about Bernoulli numbers and modular forms.
 
 References :
 
