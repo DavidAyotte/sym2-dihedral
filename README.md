@@ -8,7 +8,7 @@ List of files :
 * dihedral.gp : functions about dihedrals congruences on modular forms;
 * misc.gp : miscealleneous functions about p-valuation of Bernoulli numbers and modular forms.
 
-In a gp session, after reading a file, you can type <?? nameoffile> to obtain more information about the file.
+In a gp session, after reading a file, you can type <?? name_of_file> to obtain more information about the file.
 
 References :
 
