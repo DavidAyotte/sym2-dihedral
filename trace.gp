@@ -12,13 +12,13 @@ traceniv1(k) = {
 	ck = facteurck(k);
 	bernoullipol = bernpol(k-1);
 	
-	\\Nombre de Bernoulli generalises
+	\\ Nombres de Bernoulli generalises
 	bern4 = berngen(k, 4);
 	bern3 = berngen(k, 3);
 	
 	return(uk*(bern4 + 2*bern3 + bernfrac(2*k-2)*(1+k/bernfrac(k))));
 }
-addhelp(traceniv1, "traceniv1(k) : compute the trace of the symetric square L function");
+addhelp(traceniv1, "traceniv1(k) : compute the trace of the symmetric square L-function");
 
 ordpfactorial(n, p) = {
 	if(!isprime(p), error("p doit être un nombre premier"));
@@ -47,7 +47,7 @@ bernsum(k) = {
 	B = bern4 + 2*bern3 + bernfrac(2*k-2)*(1+k/bernfrac(k));
 	return(B);
 }
-addhelp(bernsum, "Calcul du facteur comprennant une somme de nombre de bernoulli dans la formule de la trace")
+addhelp(bernsum, "Calcul du facteur comprenant une somme de nombres de Bernoulli dans la formule de la trace")
 
 vpbernsum(k, p) = {
 	return(valuation(bernsum(k), p));
@@ -58,6 +58,4 @@ checkmp(p, m) = {
 	if((2*m+1)%p == 0, return(1));
 	return(0);
 }
-addhelp(checkmp, "verification rapide")
-
-
+addhelp(checkmp, "vérification rapide")
